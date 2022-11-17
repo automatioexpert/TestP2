@@ -12,12 +12,12 @@ public class TagNames {
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
-driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.get("https://www.physicsandmathstutor.com/");
-    List<WebElement> tags= driver.findElements(By.tagName("a"));
-    for(WebElement tag:tags){
-        System.out.println(tag.getText());
-    }
-    driver.quit();
+        List<WebElement> tags = driver.findElements(By.tagName("a"));
+        for (WebElement tag : tags) {
+            System.out.println(tag.getText());
+        }
+        driver.quit();
     }
 }
